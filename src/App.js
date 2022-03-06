@@ -14,9 +14,9 @@ function App() {
 function User(){
   return(
     <div>
-      <h1>Mobile Operating System</h1>
+      <h1 className='con'>Mobile Operating System</h1>
       <u>{product}</u>
-      <h1>Mobile Manufatures</h1>
+      <h1 className='con'>Mobile Manufatures</h1>
       <u>{manu}</u>
 
     </div>
