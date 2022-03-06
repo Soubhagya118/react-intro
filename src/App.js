@@ -5,17 +5,26 @@ function App() {
   const product=["Android","Blackberry", "iphone", "Windows phone"];
   const manu=["Samsung", "HTC","Micromax","Apple"]
   return (
-    <div className="App">
-    <h1>Mobile Operating System</h1>
-    <ul>
-      {product.map((e)=><li>{e}</li>)}
-    </ul>
-    <h1>Mobile Manufatures</h1>
-    <ul>
-    {manu.map((e)=><li style={{listStyle:"circle"}}>{e}</li>)}
-     </ul>
-    </div>
+    <>
+    {product.map((user)=>(
+      <User product={product}/>
+    ))}
+    {manu.map((user)=>(
+      <User manu={manu}/>
+    ))}
+    </>
   );
+};
+
+function User({product,manu}){
+  return(
+    <div>
+      <h1>Mobile Operating System</h1>
+  <ul>{product}</ul>
+    <h1>Mobile Manufatures</h1>
+    <ul>{manu}</ul>
+    </div>
+  )
 }
 
 export default App;
