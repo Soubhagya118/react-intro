@@ -2,21 +2,18 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const product=["Android","Blackberry", "iphone", "Windows phone"];
+  const manu=["Samsung", "HTC","Micromax","Apple"]
   return (
     <div className="App">
     <h1>Mobile Operating System</h1>
     <ul>
-      <li>Android</li>
-      <li>Blackbery</li>
-      <li>iphone</li>
-      <li>Windows phone</li>
+      {product.map((e)=><li>{e}</li>)}
     </ul>
     <h1>Mobile Manufatures</h1>
     <ul>
-      <li>Samsung</li>
-      <li>HTC</li>
-      <li>Micromax</li>
-      <li>Apple</li></ul>
+    {manu.map((e)=><li style={{listStyle:"circle"}}>{e}</li>)}
+     </ul>
     </div>
   );
 }
