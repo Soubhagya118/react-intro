@@ -6,9 +6,11 @@ function App() {
   const manu=["Samsung", "HTC","Micromax","Apple"]
   return (
     <>
+     <h1>Mobile Operating System</h1>
     {product.map((user)=>(
       <User product={product}/>
     ))}
+      <h1>Mobile Manufatures</h1>
     {manu.map((user)=>(
       <User manu={manu}/>
     ))}
@@ -19,10 +21,10 @@ function App() {
 function User({product,manu}){
   return(
     <div>
-      <h1>Mobile Operating System</h1>
-  <ul>{product}</ul>
-    <h1>Mobile Manufatures</h1>
-    <ul>{manu}</ul>
+     
+  <li>{product}</li>
+  
+    <li>{manu}</li>
     </div>
   )
 }
