@@ -6,14 +6,12 @@ function App() {
   const manu=["Samsung", "HTC","Micromax","Apple"]
   return (
     <>
-     <h1>Mobile Operating System</h1>
-    {product.map((user)=>(
-      <User product={product}/>
-    ))}
-      <h1>Mobile Manufatures</h1>
-    {manu.map((user)=>(
-      <User manu={manu}/>
-    ))}
+    <ul>
+    {product.map((e)=><li>{e}</li>)}
+    </ul>
+    <ul>
+    {manu.map((e)=><li>{e}</li>)}
+    </ul>
     </>
   );
 };
@@ -21,10 +19,10 @@ function App() {
 function User({product,manu}){
   return(
     <div>
-     
-  <li>{product}</li>
-  
-    <li>{manu}</li>
+      <h1>Mobile Operating System</h1>
+  <ul>{product}</ul>
+    <h1>Mobile Manufatures</h1>
+    <ul>{manu}</ul>
     </div>
   )
 }
