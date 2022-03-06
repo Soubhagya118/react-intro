@@ -6,25 +6,19 @@ function App() {
   const manu=["Samsung", "HTC","Micromax","Apple"]
   return (
     <>
-    <h1>Mobile Operating System</h1>
-    <ul>
-    {product.map((e)=><li>{e}</li>)}
-    </ul>
-    <h1>Mobile Manufatures</h1>
-    <ul>
-    {manu.map((e)=><li>{e}</li>)}
-    </ul>
+    {product.map((e)=> User(e))}
     </>
   );
 };
 
-function User({product,manu}){
+function User(){
   return(
     <div>
-      
-  {product}
-    
-    {manu}
+      <h1>Mobile Operating System</h1>
+      <u>{product}</u>
+      <h1>Mobile Manufatures</h1>
+      <u>{manu}</u>
+
     </div>
   )
 }
